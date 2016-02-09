@@ -1,0 +1,7 @@
+C:\Users\DGord\Documents\greatmaps\GMap.NET.Core\bin\Debug\GMap.NET.Core.dll
+C:\Users\DGord\Documents\greatmaps\GMap.NET.Core\bin\Debug\GMap.NET.Core.pdb
+C:\Users\DGord\Documents\greatmaps\GMap.NET.Core\obj\Debug\GMap.NET.Core.csprojResolveAssemblyReference.cache
+C:\Users\DGord\Documents\greatmaps\GMap.NET.Core\obj\Debug\GMap.NET.Properties.Resources.resources
+C:\Users\DGord\Documents\greatmaps\GMap.NET.Core\obj\Debug\GMap.NET.Core.csproj.GenerateResource.Cache
+C:\Users\DGord\Documents\greatmaps\GMap.NET.Core\obj\Debug\GMap.NET.Core.dll
+C:\Users\DGord\Documents\greatmaps\GMap.NET.Core\obj\Debug\GMap.NET.Core.pdb

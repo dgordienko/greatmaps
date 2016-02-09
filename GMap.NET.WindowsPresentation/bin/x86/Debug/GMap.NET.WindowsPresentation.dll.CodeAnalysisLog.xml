@@ -1,0 +1,984 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 14.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="14.0">
+ <Namespaces>
+  <Namespace Name="GMap.NET.WindowsPresentation">
+   <Messages>
+    <Message Id="NET" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="85" Level="Error">Исправьте прописные или строчные буквы строки "NET" в имени пространства имен "GMap.NET.WindowsPresentation", изменив ее на "Net".</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
+ </Namespaces>
+ <Targets>
+  <Target Name="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\bin\Debug\GMap.NET.WindowsPresentation.dll">
+   <Modules>
+    <Module Name="gmap.net.windowspresentation.dll">
+     <Messages>
+      <Message Id="NET" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+       <Issue Name="Assembly" Certainty="85" Level="Error">Исправьте прописные или строчные буквы строки "NET" в имени сборки 'GMap.NET.WindowsPresentation.dll', изменив ее на "Net".</Issue>
+      </Message>
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Error">Пометьте 'GMap.NET.WindowsPresentation.dll' как CLSCompliant(true), поскольку он предоставляет типы, видимые извне.</Issue>
+      </Message>
+      <Message TypeName="MarkAssembliesWithComVisible" Category="Microsoft.Design" CheckId="CA1017" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking">
+       <Issue Name="AttributeTrue" Certainty="95" Level="Error">Рассмотрите возможность присвоения атрибуту ComVisible сборки 'GMap.NET.WindowsPresentation.dll' значения "false" и установки нужных значений этого параметра на уровне типов.</Issue>
+      </Message>
+      <Message TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Warning">Так как сборка 'GMap.NET.WindowsPresentation.dll' содержит файл ResX-ресурса, пометьте его атрибутом NeutralResourcesLanguage, указав язык ресурсов внутри сборки. Это может ускорить поиск ресурса при первом извлечении.</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="GMap.NET.WindowsPresentation">
+       <Types>
+        <Type Name="GMapControl" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="AvoidExcessiveClassCoupling" Category="Microsoft.Maintainability" CheckId="CA1506" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="90" Level="Error">'GMapControl' взаимозависим от 161 других типов из 26 других пространств имен. Чтобы уменьшить взаимозависимость классов, напишите заново или реструктурируйте методы класса, или продумайте перемещение некоторых методов класса к другим типам, от которых он сильно взаимозависим. Взаимозависимость классов выше 95 указывает на неудобство поддержки, взаимозависимость классов между 95 и 80 указывает на среднее удобство поддержки, а взаимозависимость классов ниже 80 указывает на высокое удобство поддержки.</Issue>
+          </Message>
+          <Message TypeName="ComVisibleTypeBaseTypesShouldBeComVisible" Category="Microsoft.Interoperability" CheckId="CA1405" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="DependsOnFix">
+           <Issue Certainty="90" Level="Error">'GMapControl' помечен как ComVisible(true), но имеет следующие типы ComVisible(false) в иерархии объектов: 'ItemsControl', 'Control', 'FrameworkElement', 'UIElement', 'Visual', 'DependencyObject', 'DispatcherObject'</Issue>
+          </Message>
+          <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+           <Issue Name="ProvideDisposeBool" Certainty="95" Level="Error">Предоставьте перегружаемую реализацию Dispose(bool) для 'GMapControl' или отметьте тип как запечатанный. При вызове Dispose(false) должны очищаться только машинные ресурсы. При вызове Dispose(true) должны очищаться и управляемые, и машинные ресурсы.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#.cctor()" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="InitializeReferenceTypeStaticFieldsInline" Category="Microsoft.Performance" CheckId="CA1810" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="CriticalWarning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="47">Инициализируйте все статические поля в 'GMapControl' при объявлении и удалите явный статический конструктор.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="AvoidExcessiveClassCoupling" Category="Microsoft.Maintainability" CheckId="CA1506" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Name="Method" Certainty="90" Level="Error" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="157">'GMapControl.GMapControl()' взаимозависим от 48 других типов из 12 других пространств имен. Чтобы уменьшить взаимозависимость классов, напишите заново или реструктурируйте данный метод, или продумайте перемещение метода к другим типам, от которых он сильно взаимозависим. Взаимозависимость классов выше 40 указывает на неудобство поддержки, взаимозависимость классов между 40 и 30 указывает на среднее удобство поддержки, а взаимозависимость классов ниже 30 указывает на высокое удобство поддержки.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#BoundsOfMap" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Так как поле 'GMapControl.BoundsOfMap' является видимым извне объявляющего его типа, необходимо изменить уровень доступа на частный и добавить свойство, имеющее тот же уровень доступа, что и поле, чтобы обеспечить доступ к нему.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CenterCrossPen" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Так как поле 'GMapControl.CenterCrossPen' является видимым извне объявляющего его типа, необходимо изменить уровень доступа на частный и добавить свойство, имеющее тот же уровень доступа, что и поле, чтобы обеспечить доступ к нему.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreatePolygonPath(System.Collections.Generic.List`1&lt;System.Windows.Point&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="1060">Измените 'List&lt;Point&gt;' в 'GMapControl.CreatePolygonPath(List&lt;Point&gt;)' так, чтобы использовать Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; или KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreatePolygonPath(System.Collections.Generic.List`1&lt;System.Windows.Point&gt;,System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="1070">Измените 'List&lt;Point&gt;' в 'GMapControl.CreatePolygonPath(List&lt;Point&gt;, bool)' так, чтобы использовать Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; или KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message Id="0" TypeName="Проверить аргументы или открытые методы" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="1076">В видимом извне методе 'GMapControl.CreatePolygonPath(List&lt;Point&gt;, bool)' проверьте параметр 'localPath' перед его использованием.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateRoutePath(System.Collections.Generic.List`1&lt;System.Windows.Point&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="998">Измените 'List&lt;Point&gt;' в 'GMapControl.CreateRoutePath(List&lt;Point&gt;)' так, чтобы использовать Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; или KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateRoutePath(System.Collections.Generic.List`1&lt;System.Windows.Point&gt;,System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="1008">Измените 'List&lt;Point&gt;' в 'GMapControl.CreateRoutePath(List&lt;Point&gt;, bool)' так, чтобы использовать Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; или KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message Id="0" TypeName="Проверить аргументы или открытые методы" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="1014">В видимом извне методе 'GMapControl.CreateRoutePath(List&lt;Point&gt;, bool)' проверьте параметр 'localPath' перед его использованием.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DisableAltForSelection" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Так как поле 'GMapControl.DisableAltForSelection' является видимым извне объявляющего его типа, необходимо изменить уровень доступа на частный и добавить свойство, имеющее тот же уровень доступа, что и поле, чтобы обеспечить доступ к нему.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Dispose()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking">
+             <Issue Name="NotCalled" Certainty="75" Level="CriticalWarning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="2316">Измените 'GMapControl.Dispose()', чтобы вызвать 'GC.SuppressFinalize(object)'. В результате в производных типах, использующих метод завершения, отпадет необходимость в повторной реализации интерфейса "IDisposable" для вызова этого метода.</Issue>
+            </Message>
+            <Message Id="Core" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="2316">'GMapControl' содержит поле 'GMapControl.Core' типа IDisposable: 'Core'. Замените метод Dispose для 'GMapControl' на вызов Dispose или Close по этому полю.</Issue>
+            </Message>
+            <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Name="DisposeImplementation" Certainty="95" Level="Error" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="2316">Измените 'GMapControl.Dispose()', чтобы он вызывал Dispose(true), затем вызывал GC.SuppressFinalize для текущего экземпляра объекта ("this" или "Me" в Visual Basic), а затем возвращал результат.</Issue>
+             <Issue Name="DisposeSignature" Certainty="95" Level="Error" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="2316">Убедитесь, что 'GMapControl.Dispose()' объявлен как общий и запечатанный.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DragButton" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Так как поле 'GMapControl.DragButton' является видимым извне объявляющего его типа, необходимо изменить уровень доступа на частный и добавить свойство, имеющее тот же уровень доступа, что и поле, чтобы обеспечить доступ к нему.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DrawMap(System.Windows.Media.DrawingContext)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidExcessiveClassCoupling" Category="Microsoft.Maintainability" CheckId="CA1506" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Name="Method" Certainty="75" Level="Warning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="811">'GMapControl.DrawMap(DrawingContext)' взаимозависим от 34 других типов из 13 других пространств имен. Чтобы уменьшить взаимозависимость классов, напишите заново или реструктурируйте данный метод, или продумайте перемещение метода к другим типам, от которых он сильно взаимозависим. Взаимозависимость классов выше 40 указывает на неудобство поддержки, взаимозависимость классов между 40 и 30 указывает на среднее удобство поддержки, а взаимозависимость классов ниже 30 указывает на высокое удобство поддержки.</Issue>
+            </Message>
+            <Message TypeName="AvoidExcessiveComplexity" Category="Microsoft.Maintainability" CheckId="CA1502" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="Warning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="811">'GMapControl.DrawMap(DrawingContext)' имеет сложность организации циклов 28. Напишите заново или реструктурируйте метод, чтобы уменьшить сложность до 25.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#EmptyMapBackground" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Так как поле 'GMapControl.EmptyMapBackground' является видимым извне объявляющего его типа, необходимо изменить уровень доступа на частный и добавить свойство, имеющее тот же уровень доступа, что и поле, чтобы обеспечить доступ к нему.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#EmptyTileBorders" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Так как поле 'GMapControl.EmptyTileBorders' является видимым извне объявляющего его типа, необходимо изменить уровень доступа на частный и добавить свойство, имеющее тот же уровень доступа, что и поле, чтобы обеспечить доступ к нему.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#EmptytileBrush" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Так как поле 'GMapControl.EmptytileBrush' является видимым извне объявляющего его типа, необходимо изменить уровень доступа на частный и добавить свойство, имеющее тот же уровень доступа, что и поле, чтобы обеспечить доступ к нему.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#EmptyTileText" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Так как поле 'GMapControl.EmptyTileText' является видимым извне объявляющего его типа, необходимо изменить уровень доступа на частный и добавить свойство, имеющее тот же уровень доступа, что и поле, чтобы обеспечить доступ к нему.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ForceUpdateOverlays(System.Collections.IEnumerable)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking">
+             <Issue Name="Local" Certainty="95" Level="Warning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="768">Переменная 'i' приведена к типу 'IShapable' несколько раз в методе 'GMapControl.ForceUpdateOverlays(IEnumerable)'. Сохраните в кэш-памяти результат оператора "as" или прямого приведения, чтобы устранить избыточную команду isint.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetRectOfAllMarkers(System.Nullable`1&lt;System.Int32&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Z" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="1178">В члене 'GMapControl.GetRectOfAllMarkers(int?)' исправьте прописные или строчные буквы строки "Z" в имени параметра 'ZIndex', изменив ее на "z".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#HelperLinePen" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Так как поле 'GMapControl.HelperLinePen' является видимым извне объявляющего его типа, необходимо изменить уровень доступа на частный и добавить свойство, имеющее тот же уровень доступа, что и поле, чтобы обеспечить доступ к нему.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#IgnoreMarkerOnMouseWheel" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Так как поле 'GMapControl.IgnoreMarkerOnMouseWheel' является видимым извне объявляющего его типа, необходимо изменить уровень доступа на частный и добавить свойство, имеющее тот же уровень доступа, что и поле, чтобы обеспечить доступ к нему.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#InvertedMouseWheelZooming" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Так как поле 'GMapControl.InvertedMouseWheelZooming' является видимым извне объявляющего его типа, необходимо изменить уровень доступа на частный и добавить свойство, имеющее тот же уровень доступа, что и поле, чтобы обеспечить доступ к нему.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Manager" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="521">Параметр "this" ("Me" в Visual Basic) никогда не используется в 'GMapControl.Manager'. Пометьте член как static (или Shared в среде Visual Basic) либо используйте "this" или "Me" в теле метода или хотя бы в одном методе доступа к свойству.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#MapRotateTransform" Kind="Field" Static="False" Accessibility="Assembly" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">Вероятно, поле 'GMapControl.MapRotateTransform' нигде не используется, или ему только присваивается значение. Используйте это поле или удалите его.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Markers" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareReadOnlyMutableReferenceTypes" Category="Microsoft.Security" CheckId="CA2104" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking">
+             <Issue Certainty="25" Level="Error">Удалите обозначение только для чтения из 'GMapControl.Markers' или измените поле, чтобы оно имело неизменяющийся ссылочный тип. Если ссылочный тип 'ObservableCollection&lt;GMapMarker&gt;' фактически неизменяющийся, пропустите это сообщение.</Issue>
+            </Message>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Так как поле 'GMapControl.Markers' является видимым извне объявляющего его типа, необходимо изменить уровень доступа на частный и добавить свойство, имеющее тот же уровень доступа, что и поле, чтобы обеспечить доступ к нему.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Offset(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="x" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="1243">В методе 'GMapControl.Offset(int, int)' подберите более значимое имя для параметра 'x'.</Issue>
+            </Message>
+            <Message Id="y" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="1243">В методе 'GMapControl.Offset(int, int)' подберите более значимое имя для параметра 'y'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnItemsChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Проверить аргументы или открытые методы" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="666">В видимом извне методе 'GMapControl.OnItemsChanged(NotifyCollectionChangedEventArgs)' проверьте параметр 'e' перед его использованием.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnKeyDown(System.Windows.Input.KeyEventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Проверить аргументы или открытые методы" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="1537">В видимом извне методе 'GMapControl.OnKeyDown(KeyEventArgs)' проверьте параметр 'e' перед его использованием.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnKeyUp(System.Windows.Input.KeyEventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Проверить аргументы или открытые методы" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="1523">В видимом извне методе 'GMapControl.OnKeyUp(KeyEventArgs)' проверьте параметр 'e' перед его использованием.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnMouseDown(System.Windows.Input.MouseButtonEventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Проверить аргументы или открытые методы" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="1631">В видимом извне методе 'GMapControl.OnMouseDown(MouseButtonEventArgs)' проверьте параметр 'e' перед его использованием.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnMouseMove(System.Windows.Input.MouseEventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Проверить аргументы или открытые методы" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="1728">В видимом извне методе 'GMapControl.OnMouseMove(MouseEventArgs)' проверьте параметр 'e' перед его использованием.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnMouseUp(System.Windows.Input.MouseButtonEventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Проверить аргументы или открытые методы" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="1675">В видимом извне методе 'GMapControl.OnMouseUp(MouseButtonEventArgs)' проверьте параметр 'e' перед его использованием.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnMouseWheel(System.Windows.Input.MouseWheelEventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Проверить аргументы или открытые методы" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="1561">В видимом извне методе 'GMapControl.OnMouseWheel(MouseWheelEventArgs)' проверьте параметр 'e' перед его использованием.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnRender(System.Windows.Media.DrawingContext)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Проверить аргументы или открытые методы" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="1379">В видимом извне методе 'GMapControl.OnRender(DrawingContext)' проверьте параметр 'drawingContext' перед его использованием.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnStylusDown(System.Windows.Input.StylusDownEventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Проверить аргументы или открытые методы" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="1830">В видимом извне методе 'GMapControl.OnStylusDown(StylusDownEventArgs)' проверьте параметр 'e' перед его использованием.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnStylusMove(System.Windows.Input.StylusEventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Проверить аргументы или открытые методы" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="1896">В видимом извне методе 'GMapControl.OnStylusMove(StylusEventArgs)' проверьте параметр 'e' перед его использованием.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnStylusUp(System.Windows.Input.StylusEventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Проверить аргументы или открытые методы" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="1863">В видимом извне методе 'GMapControl.OnStylusUp(StylusEventArgs)' проверьте параметр 'e' перед его использованием.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectedAreaFill" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Так как поле 'GMapControl.SelectedAreaFill' является видимым извне объявляющего его типа, необходимо изменить уровень доступа на частный и добавить свойство, имеющее тот же уровень доступа, что и поле, чтобы обеспечить доступ к нему.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectionPen" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Так как поле 'GMapControl.SelectionPen' является видимым извне объявляющего его типа, необходимо изменить уровень доступа на частный и добавить свойство, имеющее тот же уровень доступа, что и поле, чтобы обеспечить доступ к нему.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectionUseCircle" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Так как поле 'GMapControl.SelectionUseCircle' является видимым извне объявляющего его типа, необходимо изменить уровень доступа на частный и добавить свойство, имеющее тот же уровень доступа, что и поле, чтобы обеспечить доступ к нему.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ShowCenter" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Так как поле 'GMapControl.ShowCenter' является видимым извне объявляющего его типа, необходимо изменить уровень доступа на частный и добавить свойство, имеющее тот же уровень доступа, что и поле, чтобы обеспечить доступ к нему.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ShowExportDialog()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Windows.MessageBox.Show(System.String,System.String,System.Windows.MessageBoxButton,System.Windows.MessageBoxImage)" TypeName="Не передавать литералы в качестве локализованных параметров" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="2068">Метод 'GMapControl.ShowExportDialog()' передает строку-литерал, как параметр "caption" при вызове 'MessageBox.Show(string, string, MessageBoxButton, MessageBoxImage)'. Вместо этого выполните поиск следующей строки (строк) в таблице источника: "GMap.NET".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="2072">Метод 'GMapControl.ShowExportDialog()' передает строку-литерал, как параметр "caption" при вызове 'MessageBox.Show(string, string, MessageBoxButton, MessageBoxImage)'. Вместо этого выполните поиск следующей строки (строк) в таблице источника: "GMap.NET".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ShowImportDialog()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Windows.MessageBox.Show(System.String,System.String,System.Windows.MessageBoxButton,System.Windows.MessageBoxImage)" TypeName="Не передавать литералы в качестве локализованных параметров" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="2105">Метод 'GMapControl.ShowImportDialog()' передает строку-литерал, как параметр "caption" при вызове 'MessageBox.Show(string, string, MessageBoxButton, MessageBoxImage)'. Вместо этого выполните поиск следующей строки (строк) в таблице источника: "GMap.NET".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="2110">Метод 'GMapControl.ShowImportDialog()' передает строку-литерал, как параметр "caption" при вызове 'MessageBox.Show(string, string, MessageBoxButton, MessageBoxImage)'. Вместо этого выполните поиск следующей строки (строк) в таблице источника: "GMap.NET".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TouchEnabled" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Так как поле 'GMapControl.TouchEnabled' является видимым извне объявляющего его типа, необходимо изменить уровень доступа на частный и добавить свойство, имеющее тот же уровень доступа, что и поле, чтобы обеспечить доступ к нему.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ZoomAndCenterMarkers(System.Nullable`1&lt;System.Int32&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Z" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="1162">В члене 'GMapControl.ZoomAndCenterMarkers(int?)' исправьте прописные или строчные буквы строки "Z" в имени параметра 'ZIndex', изменив ее на "z".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnEmptyTileError" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Name="First" Certainty="95" Level="Error" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="2303">Объявите первый параметр для 'EmptyTileError' как объект с именем "sender".</Issue>
+             <Issue Name="Second" Certainty="95" Level="Error" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapControl.cs" Line="2303">Объявите второй параметр для 'EmptyTileError' как EventArgs или экземпляр типа, расширяющего EventArgs, и присвойте ему имя "e".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnSelectionChange" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Name="First" Certainty="95" Level="Error">Объявите первый параметр для 'SelectionChange' как объект с именем "sender".</Issue>
+             <Issue Name="Second" Certainty="95" Level="Error">Объявите второй параметр для 'SelectionChange' как EventArgs или экземпляр типа, расширяющего EventArgs, и присвойте ему имя "e".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="GMapImage" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Dispose()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking">
+             <Issue Name="NotCalled" Certainty="75" Level="CriticalWarning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapImage.cs" Line="21">Измените 'GMapImage.Dispose()', чтобы вызвать 'GC.SuppressFinalize(object)'. В результате в производных типах, использующих метод завершения, отпадет необходимость в повторной реализации интерфейса "IDisposable" для вызова этого метода.</Issue>
+            </Message>
+            <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Name="DisposeImplementation" Certainty="95" Level="Error" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapImage.cs" Line="21">Измените 'GMapImage.Dispose()', чтобы он вызывал Dispose(true), затем вызывал GC.SuppressFinalize для текущего экземпляра объекта ("this" или "Me" в Visual Basic), а затем возвращал результат.</Issue>
+             <Issue Name="DisposeSignature" Certainty="95" Level="Error" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapImage.cs" Line="21">Убедитесь, что 'GMapImage.Dispose()' объявлен как общий и запечатанный.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Img" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Так как поле 'GMapImage.Img' является видимым извне объявляющего его типа, необходимо изменить уровень доступа на частный и добавить свойство, имеющее тот же уровень доступа, что и поле, чтобы обеспечить доступ к нему.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="GMapImageProxy" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#FromStream(System.IO.Stream)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Ликвидировать объекты перед потерей области" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapImage.cs" Line="124">В методе 'GMapImageProxy.FromStream(Stream)' объект 'ret' не уничтожается во всех возможных путях исключений. Следует вызвать метод System.IDisposable.Dispose для объекта 'ret' до того, как все ссылки на него будут находиться вне области действия.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Instance" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareReadOnlyMutableReferenceTypes" Category="Microsoft.Security" CheckId="CA2104" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking">
+             <Issue Certainty="25" Level="Error">Удалите обозначение только для чтения из 'GMapImageProxy.Instance' или измените поле, чтобы оно имело неизменяющийся ссылочный тип. Если ссылочный тип 'GMapImageProxy' фактически неизменяющийся, пропустите это сообщение.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Save(System.IO.Stream,GMap.NET.PureImage)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapImage.cs" Line="147">Измените 'GMapImageProxy.Save(Stream, PureImage)' так, чтобы перехватывались более специфические, чем 'object', исключения, либо обеспечьте повторное порождение исключения.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="GMapMarker" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Map" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#get_Map()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking">
+               <Issue Name="Local" Certainty="95" Level="Warning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapMarker.cs" Line="98">Переменная 'visual' приведена к типу 'GMapControl' несколько раз в методе 'GMapMarker.Map.get()'. Сохраните в кэш-памяти результат оператора "as" или прямого приведения, чтобы устранить избыточную команду isint.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#Tag" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Так как поле 'GMapMarker.Tag' является видимым извне объявляющего его типа, необходимо изменить уровень доступа на частный и добавить свойство, имеющее тот же уровень доступа, что и поле, чтобы обеспечить доступ к нему.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="GMapPolygon" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Collections.Generic.IEnumerable`1&lt;GMap.NET.PointLatLng&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapPolygon.cs" Line="9">'GMapPolygon.GMapPolygon(IEnumerable&lt;PointLatLng&gt;)' содержит цепочку вызовов, которая приводит к вызову виртуального метода, определенного классом. Просмотрите следующий стек вызовов для обнаружения непреднамеренных последствий: &#xD;&#xA;&#xD;&#xA;GMapPolygon..ctor(IEnumerable&lt;PointLatLng&gt;)&#xD;&#xA;GMapPolygon.RegenerateShape(GMapControl):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Points" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareReadOnlyMutableReferenceTypes" Category="Microsoft.Security" CheckId="CA2104" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking">
+             <Issue Certainty="25" Level="Error">Удалите обозначение только для чтения из 'GMapPolygon.Points' или измените поле, чтобы оно имело неизменяющийся ссылочный тип. Если ссылочный тип 'List&lt;PointLatLng&gt;' фактически неизменяющийся, пропустите это сообщение.</Issue>
+            </Message>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Так как поле 'GMapPolygon.Points' является видимым извне объявляющего его типа, необходимо изменить уровень доступа на частный и добавить свойство, имеющее тот же уровень доступа, что и поле, чтобы обеспечить доступ к нему.</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error">Измените 'List&lt;PointLatLng&gt;' в 'GMapPolygon.Points' так, чтобы использовать Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; или KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="GMapRoute" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Collections.Generic.IEnumerable`1&lt;GMap.NET.PointLatLng&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="GMapRoute.cs" Line="14">'GMapRoute.GMapRoute(IEnumerable&lt;PointLatLng&gt;)' содержит цепочку вызовов, которая приводит к вызову виртуального метода, определенного классом. Просмотрите следующий стек вызовов для обнаружения непреднамеренных последствий: &#xD;&#xA;&#xD;&#xA;GMapRoute..ctor(IEnumerable&lt;PointLatLng&gt;)&#xD;&#xA;GMapRoute.RegenerateShape(GMapControl):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Points" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareReadOnlyMutableReferenceTypes" Category="Microsoft.Security" CheckId="CA2104" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking">
+             <Issue Certainty="25" Level="Error">Удалите обозначение только для чтения из 'GMapRoute.Points' или измените поле, чтобы оно имело неизменяющийся ссылочный тип. Если ссылочный тип 'List&lt;PointLatLng&gt;' фактически неизменяющийся, пропустите это сообщение.</Issue>
+            </Message>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Так как поле 'GMapRoute.Points' является видимым извне объявляющего его типа, необходимо изменить уровень доступа на частный и добавить свойство, имеющее тот же уровень доступа, что и поле, чтобы обеспечить доступ к нему.</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error">Измените 'List&lt;PointLatLng&gt;' в 'GMapRoute.Points' так, чтобы использовать Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; или KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="HelperLineOptions" Kind="Enum" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#DontShow" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Dont" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Замените термин "Dont" в имени члена 'HelperLineOptions.DontShow' на предпочитаемый вариант "DoNot".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SelectionChange" Kind="Delegate" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="Selection" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+           <Issue Name="DelegateParameter" Certainty="85" Level="Error">В делегате 'SelectionChange' исправьте прописные или строчные буквы строки "Selection" в имени параметра 'Selection', изменив ее на "selection".</Issue>
+          </Message>
+          <Message Id="Zoom" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+           <Issue Name="DelegateParameter" Certainty="85" Level="Error">В делегате 'SelectionChange' исправьте прописные или строчные буквы строки "Zoom" в имени параметра 'ZoomToFit', изменив ее на "zoom".</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="TilePrefetcher" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ComVisibleTypeBaseTypesShouldBeComVisible" Category="Microsoft.Interoperability" CheckId="CA1405" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="DependsOnFix">
+           <Issue Certainty="90" Level="Error">'TilePrefetcher' помечен как ComVisible(true), но имеет следующие типы ComVisible(false) в иерархии объектов: 'Window', 'ContentControl', 'Control', 'FrameworkElement', 'UIElement', 'Visual', 'DependencyObject', 'DispatcherObject'</Issue>
+          </Message>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="DependsOnFix">
+           <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">Реализуйте IDisposable для 'TilePrefetcher', поскольку он создает члены следующих типов IDisposable: 'BackgroundWorker', 'AutoResetEvent'. Если 'TilePrefetcher' ранее был доставлен, добавление в данный тип новых членов, реализующих IDisposable, считается критическим изменением для существующих потребителей.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#CacheTiles(System.Int32,GMap.NET.GPoint)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="zoom" TypeName="VariableNamesShouldNotMatchFieldNames" Category="Microsoft.Maintainability" CheckId="CA1500" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="95" Level="Error" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="TilePrefetcher.xaml.cs" Line="152">Параметр 'zoom', объявленный в 'TilePrefetcher.CacheTiles(int, GPoint)', и поле экземпляра типа имеют одно и то же имя. Измените имя одного из этих элементов.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#label1" Kind="Field" Static="False" Accessibility="Assembly" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="ExcludedInSource" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking" LastSeen="0001-01-01 00:00:00Z" />
+           </Messages>
+          </Member>
+          <Member Name="#label2" Kind="Field" Static="False" Accessibility="Assembly" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="ExcludedInSource" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking" LastSeen="0001-01-01 00:00:00Z" />
+           </Messages>
+          </Member>
+          <Member Name="#OnPreviewKeyDown(System.Windows.Input.KeyEventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Проверить аргументы или открытые методы" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="TilePrefetcher.xaml.cs" Line="245">В видимом извне методе 'TilePrefetcher.OnPreviewKeyDown(KeyEventArgs)' проверьте параметр 'e' перед его использованием.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnTileCacheComplete()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Windows.Controls.TextBlock.set_Text(System.String)" TypeName="Не передавать литералы в качестве локализованных параметров" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="TilePrefetcher.xaml.cs" Line="55">Метод 'TilePrefetcher.OnTileCacheComplete()' передает строку-литерал, как параметр "value" при вызове 'TextBlock.Text.set(string)'. Вместо этого выполните поиск следующей строки (строк) в таблице источника: "all tiles saved".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnTileCacheProgress(System.Int32)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Windows.Controls.TextBlock.set_Text(System.String)" TypeName="Не передавать литералы в качестве локализованных параметров" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="TilePrefetcher.xaml.cs" Line="79">Метод 'TilePrefetcher.OnTileCacheProgress(int)' передает строку-литерал, как параметр "value" при вызове 'TextBlock.Text.set(string)'. Вместо этого выполните поиск следующей строки (строк) в таблице источника: " tile to save...".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnTileCacheStart()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Windows.Controls.TextBlock.set_Text(System.String)" TypeName="Не передавать литералы в качестве локализованных параметров" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="TilePrefetcher.xaml.cs" Line="68">Метод 'TilePrefetcher.OnTileCacheStart()' передает строку-литерал, как параметр "value" при вызове 'TextBlock.Text.set(string)'. Вместо этого выполните поиск следующей строки (строк) в таблице источника: "saving tiles...".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#progressBar1" Kind="Field" Static="False" Accessibility="Assembly" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="ExcludedInSource" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking" LastSeen="0001-01-01 00:00:00Z" />
+           </Messages>
+          </Member>
+          <Member Name="#ShowCompleteMessage" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Так как поле 'TilePrefetcher.ShowCompleteMessage' является видимым извне объявляющего его типа, необходимо изменить уровень доступа на частный и добавить свойство, имеющее тот же уровень доступа, что и поле, чтобы обеспечить доступ к нему.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Start(GMap.NET.RectLatLng,System.Int32,GMap.NET.MapProviders.GMapProvider,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="area" TypeName="VariableNamesShouldNotMatchFieldNames" Category="Microsoft.Maintainability" CheckId="CA1500" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="95" Level="Error" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="TilePrefetcher.xaml.cs" Line="85">Параметр 'area', объявленный в 'TilePrefetcher.Start(RectLatLng, int, GMapProvider, int)', и поле экземпляра типа имеют одно и то же имя. Измените имя одного из этих элементов.</Issue>
+            </Message>
+            <Message Id="provider" TypeName="VariableNamesShouldNotMatchFieldNames" Category="Microsoft.Maintainability" CheckId="CA1500" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="95" Level="Error" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="TilePrefetcher.xaml.cs" Line="85">Параметр 'provider', объявленный в 'TilePrefetcher.Start(RectLatLng, int, GMapProvider, int)', и поле экземпляра типа имеют одно и то же имя. Измените имя одного из этих элементов.</Issue>
+            </Message>
+            <Message Id="sleep" TypeName="VariableNamesShouldNotMatchFieldNames" Category="Microsoft.Maintainability" CheckId="CA1500" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="95" Level="Error" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="TilePrefetcher.xaml.cs" Line="85">Параметр 'sleep', объявленный в 'TilePrefetcher.Start(RectLatLng, int, GMapProvider, int)', и поле экземпляра типа имеют одно и то же имя. Измените имя одного из этих элементов.</Issue>
+            </Message>
+            <Message Id="zoom" TypeName="VariableNamesShouldNotMatchFieldNames" Category="Microsoft.Maintainability" CheckId="CA1500" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="95" Level="Error" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="TilePrefetcher.xaml.cs" Line="85">Параметр 'zoom', объявленный в 'TilePrefetcher.Start(RectLatLng, int, GMapProvider, int)', и поле экземпляра типа имеют одно и то же имя. Измените имя одного из этих элементов.</Issue>
+            </Message>
+            <Message Id="System.Windows.Controls.TextBlock.set_Text(System.String)" TypeName="Не передавать литералы в качестве локализованных параметров" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="TilePrefetcher.xaml.cs" Line="88">Метод 'TilePrefetcher.Start(RectLatLng, int, GMapProvider, int)' передает строку-литерал, как параметр "value" при вызове 'TextBlock.Text.set(string)'. Вместо этого выполните поиск следующей строки (строк) в таблице источника: "...".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="AvoidExcessiveComplexity" Category="Microsoft.Maintainability" CheckId="CA1502" Status="ExcludedInSource" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking" LastSeen="0001-01-01 00:00:00Z" />
+            <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Status="ExcludedInSource" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking" LastSeen="0001-01-01 00:00:00Z" />
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="ExcludedInSource" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking" LastSeen="0001-01-01 00:00:00Z" />
+           </Messages>
+          </Member>
+          <Member Name="#worker_ProgressChanged(System.Object,System.ComponentModel.ProgressChangedEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="TilePrefetcher.xaml.cs" Line="239">В связи с тем, что поведение 'int.ToString()' может изменяться в зависимости от языка и региональных настроек текущего пользователя, следует заменить этот вызов в 'TilePrefetcher.worker_ProgressChanged(object, ProgressChangedEventArgs)' вызовом 'int.ToString(IFormatProvider)'. Если результат 'int.ToString(IFormatProvider)' базируется на пользовательском вводе, укажите 'CultureInfo.CurrentCulture' в качестве параметра "IformatProvider". В ином случае, если результат будет храниться и использоваться программой, например при сохранении на диск или в базу данных, следует указать 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="TilePrefetcher.xaml.cs" Line="239">В связи с тем, что поведение 'int.ToString()' может изменяться в зависимости от языка и региональных настроек текущего пользователя, следует заменить этот вызов в 'TilePrefetcher.worker_ProgressChanged(object, ProgressChangedEventArgs)' вызовом 'int.ToString(IFormatProvider)'. Если результат 'int.ToString(IFormatProvider)' базируется на пользовательском вводе, укажите 'CultureInfo.CurrentCulture' в качестве параметра "IformatProvider". В ином случае, если результат будет храниться и использоваться программой, например при сохранении на диск или в базу данных, следует указать 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="System.Windows.Controls.TextBlock.set_Text(System.String)" TypeName="Не передавать литералы в качестве локализованных параметров" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="TilePrefetcher.xaml.cs" Line="239">Метод 'TilePrefetcher.worker_ProgressChanged(object, ProgressChangedEventArgs)' передает строку-литерал, как параметр "value" при вызове 'TextBlock.Text.set(string)'. Вместо этого выполните поиск следующей строки (строк) в таблице источника: "Fetching tile at zoom (, ): ,  of , , complete: , %".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#worker_RunWorkerCompleted(System.Object,System.ComponentModel.RunWorkerCompletedEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2016-02-09 13:32:49Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="TilePrefetcher.xaml.cs" Line="134">В связи с тем, что поведение 'int.ToString()' может изменяться в зависимости от языка и региональных настроек текущего пользователя, следует заменить этот вызов в 'TilePrefetcher.worker_RunWorkerCompleted(object, RunWorkerCompletedEventArgs)' вызовом 'int.ToString(IFormatProvider)'. Если результат 'int.ToString(IFormatProvider)' базируется на пользовательском вводе, укажите 'CultureInfo.CurrentCulture' в качестве параметра "IformatProvider". В ином случае, если результат будет храниться и использоваться программой, например при сохранении на диск или в базу данных, следует указать 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\DGord\Documents\greatmaps\GMap.NET.WindowsPresentation\GMap.NET.WindowsPresentation" File="TilePrefetcher.xaml.cs" Line="138">В связи с тем, что поведение 'int.ToString()' может изменяться в зависимости от языка и региональных настроек текущего пользователя, следует заменить этот вызов в 'TilePrefetcher.worker_RunWorkerCompleted(object, RunWorkerCompletedEventArgs)' вызовом 'int.ToString(IFormatProvider)'. Если результат 'int.ToString(IFormatProvider)' базируется на пользовательском вводе, укажите 'CultureInfo.CurrentCulture' в качестве параметра "IformatProvider". В ином случае, если результат будет храниться и использоваться программой, например при сохранении на диск или в базу данных, следует указать 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AvoidExcessiveClassCoupling" Category="Microsoft.Maintainability" CheckId="CA1506">
+   <Name>Избегайте чрезмерной взаимозависимости классов</Name>
+   <Description>Типы и методы с высокой степенью взаимозависимости классов могут затруднить поддержку.</Description>
+   <Resolution Name="Method">{0} взаимозависим от {1} других типов из {2} других пространств имен. Чтобы уменьшить взаимозависимость классов, напишите заново или реструктурируйте данный метод, или продумайте перемещение метода к другим типам, от которых он сильно взаимозависим. Взаимозависимость классов выше {3} указывает на неудобство поддержки, взаимозависимость классов между {3} и {4} указывает на среднее удобство поддержки, а взаимозависимость классов ниже {4} указывает на высокое удобство поддержки.</Resolution>
+   <Resolution Name="Type">{0} взаимозависим от {1} других типов из {2} других пространств имен. Чтобы уменьшить взаимозависимость классов, напишите заново или реструктурируйте методы класса, или продумайте перемещение некоторых методов класса к другим типам, от которых он сильно взаимозависим. Взаимозависимость классов выше {3} указывает на неудобство поддержки, взаимозависимость классов между {3} и {4} указывает на среднее удобство поддержки, а взаимозависимость классов ниже {4} указывает на высокое удобство поддержки.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb397994.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Warning</MessageLevel>
+   <File Name="maintainabilityrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidExcessiveComplexity" Category="Microsoft.Maintainability" CheckId="CA1502">
+   <Name>Избегайте чрезмерной сложности</Name>
+   <Description>Реализации излишне сложных методов усложняют понимание и поддержку кода.</Description>
+   <Resolution Name="Default">{0} имеет сложность организации циклов {1}. Напишите заново или реструктурируйте метод, чтобы уменьшить сложность до {2}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182212.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Warning</MessageLevel>
+   <File Name="maintainabilityrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823">
+   <Name>Избегайте неиспользуемых частных полей</Name>
+   <Description>В сборке обнаружены частные поля, к которым не осуществляется доступ. Если это сообщение об этом нарушении выводится по ошибке, отправьте отчет о нем в группу анализа кода Visual Studio.</Description>
+   <Resolution Name="Default">Вероятно, поле {0} нигде не используется, или ему только присваивается значение. Используйте это поле или удалите его.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms245042.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816">
+   <Name>Вызов GC.SuppressFinalize должен осуществляться правильно</Name>
+   <Description>Вызывайте GC.SuppressFinalize для подавления финализации вашего экземпляра, как только вызван Dispose. Объекты, реализующие IDisposable, должны вызывать SuppressFinalize из метода IDisposable.Dispose, чтобы помешать сборщику мусора вызывать Object.Finalize для объекта, которому это не требуется.</Description>
+   <Resolution Name="NotCalled">Измените {0}, чтобы вызвать {1}. В результате в производных типах, использующих метод завершения, отпадет необходимость в повторной реализации интерфейса "IDisposable" для вызова этого метода.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182269.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">CriticalWarning</MessageLevel>
+   <File Name="usagerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="ComVisibleTypeBaseTypesShouldBeComVisible" Category="Microsoft.Interoperability" CheckId="CA1405">
+   <Name>Базовые типы, относящиеся к типу, видимому для COM, должны быть видимыми для COM</Name>
+   <Description>Типы, видимые для COM, должны иметь иерархию объектов, которая целиком видима для COM.</Description>
+   <Resolution Name="Default">{0} помечен как ComVisible(true), но имеет следующие типы ComVisible(false) в иерархии объектов: {1}</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182202.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error</MessageLevel>
+   <File Name="interoperabilityrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009">
+   <Name>Правильно объявите обработчики событий</Name>
+   <Description>По соглашению для событий .NET предусмотрены два параметра, определяющие источник события и данные события. Сигнатуры обработчиков событий должны иметь следующую форму: void MyEventHandler(object sender, EventArgs e). Параметр "sender" всегда имеет тип System.Object, даже если есть возможность использовать более конкретный тип. Параметр "e" всегда имеет тип System.EventArgs. События, не предоставляющие данных о себе, должны использовать тип делегата System.EventHandler. Обработчики событий возвращают значение void, благодаря чему они могут отправлять каждое событие множеству целевых методов. Любое значение, возвращенное целевым объектом, будет утеряно после первого вызова.</Description>
+   <Resolution Name="First">Объявите первый параметр для {0} как объект с именем "sender".</Resolution>
+   <Resolution Name="Second">Объявите второй параметр для {0} как EventArgs или экземпляр типа, расширяющего EventArgs, и присвойте ему имя "e".</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182133.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213">
+   <Name>Следует высвобождать высвобождаемые поля</Name>
+   <Description>Если типу, реализующему IDisposable, принадлежат поля, которые также реализуют IDisposable, реализация Dispose() инкапсулирующего типа должна вызывать Dispose() по каждому высвобождаемому полю.</Description>
+   <Resolution Name="Default">{0} содержит поле {1} типа IDisposable: {2}. Замените метод Dispose для {0} на вызов Dispose или Close по этому полю.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182328.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214">
+   <Name>Не вызывайте переопределяемые методы в конструкторах</Name>
+   <Description>Виртуальные методы, определенные в классе, не следует вызывать из конструкторов. Если производный класс переопределил метод, будет вызвана версия производного класса (до вызова конструктора производного класса).</Description>
+   <Resolution Name="Default">{0} содержит цепочку вызовов, которая приводит к вызову виртуального метода, определенного классом. Просмотрите следующий стек вызовов для обнаружения непреднамеренных последствий: {1}</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182331.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalWarning</MessageLevel>
+   <File Name="usagerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800">
+   <Name>Не делайте лишних приведений</Name>
+   <Description>Не допускайте двойных приведений, где только возможно, так как это приводит к издержкам.</Description>
+   <Resolution Name="Local">Переменная {0} приведена к типу {1} несколько раз в методе {2}. Сохраните в кэш-памяти результат оператора "as" или прямого приведения, чтобы устранить избыточную команду {3}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182271.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031">
+   <Name>Не перехватывайте типы общих исключений</Name>
+   <Description>Не следует перехватывать исключения типа Exception или SystemException. Перехватывание исключений общего назначения может скрыть от пользователя библиотеки ошибки времени выполнения и осложнить процесс отладки. Перехватывать следует только те исключения, которые вы можете правильно обработать.</Description>
+   <Resolution Name="Default">Измените {0} так, чтобы перехватывались более специфические, чем {1}, исключения, либо обеспечьте повторное порождение исключения.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182137.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotDeclareReadOnlyMutableReferenceTypes" Category="Microsoft.Security" CheckId="CA2104">
+   <Name>Не объявляйте изменяющиеся ссылочные типы только для чтения</Name>
+   <Description>Объявление только для чтения для изменяющегося ссылочного типа не препятствует возможности изменения данных экземпляра поля. Например, объявление только для чтения поля StringBuilder не имеет смысла, так как инкапсулированные данные StringBuilder могут быть изменены с помощью ссылки только для чтения.</Description>
+   <Resolution Name="Default">Удалите обозначение только для чтения из {0} или измените поле, чтобы оно имело неизменяющийся ссылочный тип. Если ссылочный тип {1} фактически неизменяющийся, пропустите это сообщение.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182302.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="25">Error</MessageLevel>
+   <File Name="securityrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051">
+   <Name>Не объявляйте видимые поля экземпляров</Name>
+   <Description>Поля экземпляров, видимые вне типа, в котором они объявлены, ограничивают возможность изменения сведений о реализации, относящихся к этим элементам данных. Вместо этого используйте свойства. Они не влияют на удобство использования или производительность, но обеспечивают гибкость, скрывая сведения о реализации для используемых данных.</Description>
+   <Resolution Name="Default">Так как поле {0} является видимым извне объявляющего его типа, необходимо изменить уровень доступа на частный и добавить свойство, имеющее тот же уровень доступа, что и поле, чтобы обеспечить доступ к нему.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182141.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002">
+   <Name>Не предоставляйте универсальные списки</Name>
+   <Description>Не предоставляйте List&lt;T&gt; в объектных моделях. Вместо этого используйте Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; или KeyedCollection&lt;K,V&gt;. List&lt;T&gt; предназначен для использования из реализации, но не в API объектной модели. List&lt;T&gt; оптимизирован с точки зрения производительности, но за счет более длительного отслеживания версий. Например, если вы возвратите List&lt;T&gt; в клиентский код, то никогда не сможете получить уведомление, когда клиентский код изменит коллекцию.</Description>
+   <Resolution Name="Default">Измените {0} в {1} так, чтобы использовать Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; или KeyedCollection&lt;K,V&gt;</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182142.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+   <Name>Идентификаторы должны иметь правильное сочетание прописных и строчных букв</Name>
+   <Description>Идентификаторы типа, пространства имен и членов следуют стилю имен Pascal, а идентификаторы параметров используют "верблюжий" (camel) стиль имен. Двухсимвольный акроним в этих идентификаторах должен записываться прописными буквами, например, System.IO вместо System.Io. Трех- или более символьные акронимы должны следовать стилю Pascal, например, System.Xml вместо System.XML. По соглашению о стиле имен Pascal в составных словах прописной буквой выделяется первая буква каждого слова, например BackColor. По соглашению о "верблюжьем" стиле имен первая буква первого слова будет строчной, а первые буквы всех последующих слов будут прописными, например backgroundColor. Хотя на практике некоторые двухбуквенные акронимы часто не содержат две прописные буквы, правило остается в силе. Например, часто пишут "DbConnection", но это неправильно; пишите "DBConnection". Нарушение этого правила могло бы потребоваться для совместимости с существующими неуправляемыми схемами символов. В общем случае эти символы не должны быть видимы вне использующей их сборки.</Description>
+   <Resolution Name="Assembly">Исправьте прописные или строчные буквы строки "{0}" в имени сборки {1}, изменив ее на "{2}".</Resolution>
+   <Resolution Name="DelegateParameter">В делегате {0} исправьте прописные или строчные буквы строки "{1}" в имени параметра {2}, изменив ее на "{3}".</Resolution>
+   <Resolution Name="MemberParameter">В члене {0} исправьте прописные или строчные буквы строки "{1}" в имени параметра {2}, изменив ее на "{3}".</Resolution>
+   <Resolution Name="Namespace">Исправьте прописные или строчные буквы строки "{0}" в имени пространства имен "{1}", изменив ее на "{2}".</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182240.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="85">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704">
+   <Name>Идентификаторы должны иметь правильное правописание</Name>
+   <Description>Отдельные слова, составляющие идентификатор, не должны быть сокращены и должны быть написаны без орфографических ошибок. Если это правило создает ложный положительный результат для термина, который должен распознаваться, добавьте термин в пользовательский словарь FxCop.</Description>
+   <Resolution Name="MemberParameterMoreMeaningfulName">В методе {0} подберите более значимое имя для параметра {1}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb264492.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">CriticalWarning</MessageLevel>
+   <File Name="namingrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063">
+   <Name>Правильно реализуйте IDisposable</Name>
+   <Description>Во всех типах IDisposable шаблон Dispose должен быть реализован правильно.</Description>
+   <Resolution Name="DisposeImplementation">Измените {0}, чтобы он вызывал Dispose(true), затем вызывал GC.SuppressFinalize для текущего экземпляра объекта ("this" или "Me" в Visual Basic), а затем возвращал результат.</Resolution>
+   <Resolution Name="DisposeSignature">Убедитесь, что {0} объявлен как общий и запечатанный.</Resolution>
+   <Resolution Name="ProvideDisposeBool">Предоставьте перегружаемую реализацию Dispose(bool) для {0} или отметьте тип как запечатанный. При вызове Dispose(false) должны очищаться только машинные ресурсы. При вызове Dispose(true) должны очищаться и управляемые, и машинные ресурсы.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms244737.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="InitializeReferenceTypeStaticFieldsInline" Category="Microsoft.Performance" CheckId="CA1810">
+   <Name>Инициализируйте статические поля ссылочных типов при объявлении</Name>
+   <Description>Статические поля должны быть инициализированы при объявлении. Инициализация статических данных в явных статических конструкторах понижает производительность кода.</Description>
+   <Resolution Name="Default">Инициализируйте все статические поля в {0} при объявлении и удалите явный статический конструктор.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182275.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">CriticalWarning</MessageLevel>
+   <File Name="performancerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033">
+   <Name>Методы интерфейса должны быть доступны для вызова дочерним типам</Name>
+   <Description>Явные реализации методов определены с режимом доступа private. Классы, производные от классов с явной реализацией методов и выбравшие их повторное объявление на своем уровне, не смогут вызывать реализации базового класса, если базовый класс не предоставит альтернативный метод с соответствующим режимом доступа. В случае переопределения метода базового класса, который был скрыт, благодаря явной реализации интерфейса, производный класс, чтобы вызвать реализацию базового класса, должен выполнить приведение базового указателя к соответствующему интерфейсу. Однако при вызове при помощи данной ссылки фактически будет вызываться реализация производного класса, что приведет к рекурсии и, в конце концов, к переполнению стека.</Description>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182153.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+   <Name>Пометьте сборки атрибутом CLSCompliantAttribute</Name>
+   <Description>Сборки должны явно объявлять о своей CLS-совместимости при помощи атрибута CLSCompliant. Сборка без этого атрибута не является CLS-совместимой. Сборки, модули и типы могут быть CLS-совместимыми, даже если некоторые их части не являются CLS-совместимыми. Применимы следующие правила: 1). Если элемент помечен как CLSCompliant, все его несовместимые члены должны иметь атрибут CLSCompliant, аргументу которого установлено значение False. 2). Каждый CLS-несовместимый член должен быть дополнен сравнимым CLS-совместимым альтернативным членом.</Description>
+   <Resolution Name="Default">Пометьте {0} как CLSCompliant(true), поскольку он предоставляет типы, видимые извне.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182156.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithComVisible" Category="Microsoft.Design" CheckId="CA1017">
+   <Name>Пометьте сборки с помощью ComVisibleAttribute</Name>
+   <Description>Атрибут System.Runtime.InteropServices.ComVisible указывает, могут ли COM-клиенты использовать библиотеку. Хороший стиль проектирования требует, чтобы разработчики явно указывали COM-видимость. Значение по умолчанию для данного атрибута - "true". Однако лучший подход при проектировании - присвоить атрибуту сборки ComVisible значение "false", а затем пометить атрибутом ComVisible со значением "true" нужные типы, интерфейсы и отдельные члены.</Description>
+   <Resolution Name="AttributeTrue">Рассмотрите возможность присвоения атрибуту ComVisible сборки {0} значения "false" и установки нужных значений этого параметра на уровне типов.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182157.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError, Error</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824">
+   <Name>Помечайте сборки атрибутом NeutralResourcesLanguageAttribute</Name>
+   <Description>Атрибут NeutralResourcesLanguage оповещает ResourceManager о языке, используемом для объявления в сборке ресурсов, нейтральных по языку и региональным параметрам. При поиске ресурсов с теми же языком и региональными параметрами, что и нейтральные по языку ресурсы, ResourceManager автоматически использует ресурсы, расположенные в основной сборке, и не ищет вспомогательную сборку с текущими языком и региональными параметрами интерфейса пользователя для текущего потока. Это улучшает поиск первого загруженного ресурса и может уменьшить рабочие наборы.</Description>
+   <Resolution Name="Default">Так как сборка {0} содержит файл ResX-ресурса, пометьте его атрибутом NeutralResourcesLanguage, указав язык ресурсов внутри сборки. Это может ускорить поиск ресурса при первом извлечении.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb385967.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822">
+   <Name>Пометьте члены как статические</Name>
+   <Description>Методы, которые не обращаются к данным экземпляров и не вызывают методы экземпляров, могут быть определены как статические (Shared в Visual Basic). После этого компилятор создаст невиртуальные места для вызова этих членов, что предотвратит во время выполнения проверку для каждого вызова, что текущий указатель на объект не имеет значения NULL. Это может привести к ощутимому росту производительности для требовательных к производительности кодов. В некоторых случаях ошибка доступа к текущему экземпляру объекта указывает на проблемы с правильностью кода.</Description>
+   <Resolution Name="Default">Параметр "this" ("Me" в Visual Basic) никогда не используется в {0}. Пометьте член как static (или Shared в среде Visual Basic) либо используйте "this" или "Me" в теле метода или хотя бы в одном методе доступа к свойству.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms245046.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+   <Name>Указывайте IFormatProvider</Name>
+   <Description>Если существует перегрузка, которая принимает аргумент IFormatProvider, следует всегда вызывать ее, а не другую перегрузку, не принимающую этот аргумент. Некоторые методы во время выполнения преобразовывают значение в представление строки или из него. Они принимают строковый параметр, который содержит один или несколько знаков, которые называются спецификаторами формата и указывают, как следует преобразовывать значение. Если смысл спецификатора формата зависит от языка и региональных настроек, форматируемый объект предоставляет действительные символы, которые используются в представлении строки. В сценариях, в которых поведение при сортировке и сравнении не зависит от языка и региональных настроек, следует указать CultureInfo.InvariantCulture, в ином случае следует указывать CultureInfo.CurrentCulture.</Description>
+   <Resolution Name="IFormatProviderAlternateString">В связи с тем, что поведение {0} может изменяться в зависимости от языка и региональных настроек текущего пользователя, следует заменить этот вызов в {1} вызовом {2}. Если результат {2} базируется на пользовательском вводе, укажите {3} в качестве параметра "IformatProvider". В ином случае, если результат будет храниться и использоваться программой, например при сохранении на диск или в базу данных, следует указать {4}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182190.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001">
+   <Name>Типы, которым принадлежат освобождаемые поля, должны быть освобождаемыми</Name>
+   <Description>Типы, объявляющие освобождаемые члены, также должны реализовывать IDisposable. Если типу не принадлежат какие-либо неуправляемые ресурсы, нет необходимости реализовывать для него метод завершения.</Description>
+   <Resolution Name="DependsOnFix">Реализуйте IDisposable для {0}, поскольку он создает члены следующих типов IDisposable: {1}. Если {0} ранее был доставлен, добавление в данный тип новых членов, реализующих IDisposable, считается критическим изменением для существующих потребителей.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182172.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726">
+   <Name>Используйте предпочитаемые термины</Name>
+   <Description>Используйте предпочитаемые термины вместо устаревших вариантов.</Description>
+   <Resolution Name="Member">Замените термин "{0}" в имени члена {1} на предпочитаемый вариант "{2}".</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182258.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="VariableNamesShouldNotMatchFieldNames" Category="Microsoft.Maintainability" CheckId="CA1500">
+   <Name>Имена переменных не должны совпадать с именами полей</Name>
+   <Description>Имена полей экземпляра и имена переменных не должны совпадать внутри одной области.</Description>
+   <Resolution Name="Parameter">Параметр {0}, объявленный в {1}, и поле экземпляра типа имеют одно и то же имя. Измените имя одного из этих элементов.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182216.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="maintainabilityrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="Ликвидировать объекты перед потерей области" Category="Microsoft.Reliability" CheckId="CA2000">
+   <Name>Ликвидировать объекты перед потерей области</Name>
+   <Description>Если освобождаемый объект не высвобождается явно до того, как все ссылки на него оказываются вне области имен, объект будет высвобожден в некоторый заранее не определенный момент, когда сборщик мусора запустит завершающий метод объекта. Так как может возникнуть событие исключения, препятствующее выполнению метода завершения объекта, объект будет ликвидирован в явной форме.</Description>
+   <Resolution Name="ExceptionEdge">В методе {0} объект {1} не уничтожается во всех возможных путях исключений. Следует вызвать метод System.IDisposable.Dispose для объекта {1} до того, как все ссылки на него будут находиться вне области действия.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182289.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="Не передавать литералы в качестве локализованных параметров" Category="Microsoft.Globalization" CheckId="CA1303">
+   <Name>Не передавать литералы в качестве локализованных параметров</Name>
+   <Description>Строки литералов, внедренные в исходный код, сложно локализировать. Избегайте передачи строк типа литерал в качестве аргументов в случаях, когда ожидается локализованная строка.</Description>
+   <Resolution Name="KnownValue">Метод {0} передает строку-литерал, как параметр "{1}" при вызове {2}. Вместо этого выполните поиск следующей строки (строк) в таблице источника: {3}.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182187.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="Проверить аргументы или открытые методы" Category="Microsoft.Design" CheckId="CA1062">
+   <Name>Проверить аргументы или открытые методы</Name>
+   <Description>Все аргументы ссылок, передаваемые внешним видимым методам должны проверяться на NULL (Nothing в VB). При необходимости вызывает исключение System.ArgumentNullException, если аргумент равен "null".</Description>
+   <Resolution Name="Default">В видимом извне методе {0} проверьте параметр '{1}' перед его использованием.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182182.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="14.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Категория</String>
+  <String Key="Certainty">Достоверность</String>
+  <String Key="CollapseAll">Свернуть все</String>
+  <String Key="CheckId">ИД проверки</String>
+  <String Key="Error">Ошибка</String>
+  <String Key="Errors">ошибки</String>
+  <String Key="ExpandAll">Развернуть все</String>
+  <String Key="Help">Справка</String>
+  <String Key="Line">Строка</String>
+  <String Key="Messages">сообщения</String>
+  <String Key="LocationNotStoredInPdb">[расположение не сохранено в PDB]</String>
+  <String Key="Project">Проект</String>
+  <String Key="Resolution">Разрешение</String>
+  <String Key="Rule">Правило</String>
+  <String Key="RuleFile">Файл правил</String>
+  <String Key="RuleDescription">Описание правила</String>
+  <String Key="Source">Источник</String>
+  <String Key="Status">Состояние</String>
+  <String Key="Target">Цель</String>
+  <String Key="Warning">Предупреждение</String>
+  <String Key="Warnings">предупреждения</String>
+  <String Key="ReportTitle">Отчет по анализу кода</String>
+ </Localized>
+ <Exceptions>
+  <Exception Keyword="CA0063" Kind="Engine" TreatAsWarning="True">
+   <Type>Microsoft.FxCop.Sdk.FxCopException</Type>
+   <ExceptionMessage>* Не удалось загрузить файл набора правил "MinimumRecommendedRules.ruleset" или один из его зависимых файлов набора правил. </ExceptionMessage>
+  </Exception>
+ </Exceptions>
+</FxCopReport>
