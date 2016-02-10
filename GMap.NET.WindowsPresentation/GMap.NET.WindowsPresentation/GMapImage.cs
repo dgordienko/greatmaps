@@ -1,34 +1,33 @@
 ﻿
+// ReSharper disable CheckNamespace
 namespace GMap.NET.WindowsPresentation
 {
-   using System.Collections.Generic;
-   using System.Collections.ObjectModel;
-   using System.Diagnostics;
-   using System.Windows;
-   using System.Windows.Media;
+    using System.Diagnostics;
+    using System.Diagnostics.CodeAnalysis;
+    using System.Windows.Media;
    using System.Windows.Media.Imaging;
-   using GMap.NET.Internals;
-   using GMap.NET.MapProviders;
+
+    using GMap.NET.MapProviders;
 
    /// <summary>
    /// image abstraction
    /// </summary>
+   [SuppressMessage("ReSharper", "ArrangeThisQualifier")]
    public class GMapImage : PureImage
    {
       public ImageSource Img;
 
       public override void Dispose()
       {
+          // ReSharper disable once RedundantCheckBeforeAssignment
          if(Img != null)
          {
             Img = null;
          }
 
-         if(Data != null)
-         {
-            Data.Dispose();
-            Data = null;
-         }
+          if (this.Data == null) return;
+          this.Data.Dispose();
+          this.Data = null;
       }
    }
 
@@ -71,7 +70,6 @@ namespace GMap.NET.WindowsPresentation
                {
                   var bitmapDecoder = new PngBitmapDecoder(stream, BitmapCreateOptions.IgnoreColorProfile, BitmapCacheOption.OnLoad);
                   m = bitmapDecoder.Frames[0];
-                  bitmapDecoder = null;
                }
                break;
 
@@ -80,7 +78,6 @@ namespace GMap.NET.WindowsPresentation
                {
                   var bitmapDecoder = new JpegBitmapDecoder(stream, BitmapCreateOptions.IgnoreColorProfile, BitmapCacheOption.OnLoad);
                   m = bitmapDecoder.Frames[0];
-                  bitmapDecoder = null;
                }
                break;
 
@@ -89,7 +86,6 @@ namespace GMap.NET.WindowsPresentation
                {
                   var bitmapDecoder = new GifBitmapDecoder(stream, BitmapCreateOptions.IgnoreColorProfile, BitmapCacheOption.OnLoad);
                   m = bitmapDecoder.Frames[0];
-                  bitmapDecoder = null;
                }
                break;
 
@@ -98,7 +94,6 @@ namespace GMap.NET.WindowsPresentation
                {
                   var bitmapDecoder = new BmpBitmapDecoder(stream, BitmapCreateOptions.IgnoreColorProfile, BitmapCacheOption.OnLoad);
                   m = bitmapDecoder.Frames[0];
-                  bitmapDecoder = null;
                }
                break;
 
@@ -108,7 +103,6 @@ namespace GMap.NET.WindowsPresentation
                {
                   var bitmapDecoder = new TiffBitmapDecoder(stream, BitmapCreateOptions.IgnoreColorProfile, BitmapCacheOption.OnLoad);
                   m = bitmapDecoder.Frames[0];
-                  bitmapDecoder = null;
                }
                break;
 
@@ -121,9 +115,8 @@ namespace GMap.NET.WindowsPresentation
 
             if(m != null)
             {
-               ret = new GMapImage();
-               ret.Img = m;
-               if(ret.Img.CanFreeze)
+                ret = new GMapImage { Img = m };
+                if(ret.Img.CanFreeze)
                {
                   ret.Img.Freeze();
                }
@@ -134,15 +127,14 @@ namespace GMap.NET.WindowsPresentation
 
       public override bool Save(System.IO.Stream stream, PureImage image)
       {
-         GMapImage ret = (GMapImage)image;
+         var ret = (GMapImage)image;
          if(ret.Img != null)
          {
             try
             {
-               PngBitmapEncoder e = new PngBitmapEncoder();
-               e.Frames.Add(BitmapFrame.Create(ret.Img as BitmapSource));
+               var e = new PngBitmapEncoder();
+               e.Frames.Add(BitmapFrame.Create((BitmapSource)ret.Img));
                e.Save(stream);
-               e = null;
             }
             catch
             {

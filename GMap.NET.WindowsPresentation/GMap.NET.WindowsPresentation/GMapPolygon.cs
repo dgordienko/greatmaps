@@ -1,10 +1,16 @@
 ﻿
+ // ReSharper disable once CheckNamespace
 namespace GMap.NET.WindowsPresentation
 {
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
+    using System.Linq;
     using System.Windows.Shapes;
 
-    public class GMapPolygon : GMapMarker, IShapable
+    // ReSharper disable once UnusedMember.Global
+    [SuppressMessage("ReSharper", "MemberCanBePrivate.Global")]
+    [SuppressMessage("ReSharper", "ArrangeThisQualifier")]
+    public sealed class GMapPolygon : GMapMarker, IShapable
     {
         public readonly List<PointLatLng> Points = new List<PointLatLng>();
 
@@ -13,8 +19,8 @@ namespace GMap.NET.WindowsPresentation
             Points.AddRange(points);
             RegenerateShape(null);
         }
-        
-        public override void Clear()
+
+        protected override void Clear()
         {
             base.Clear();
             Points.Clear();
@@ -23,40 +29,32 @@ namespace GMap.NET.WindowsPresentation
         /// <summary>
         /// regenerates shape of polygon
         /// </summary>
-        public virtual void RegenerateShape(GMapControl map)
+        public void RegenerateShape(GMapControl map)
         {
-             if(map != null)
-             {
-                this.Map = map;
-                 
-                if(Points.Count > 1)
+            if (map == null) return;
+            Map = map;                 
+            if(Points.Count > 1)
+            {
+                Position = Points[0];                   
+                var localPath = new List<System.Windows.Point>(Points.Count);
+                var offset = Map.FromLatLngToLocal(Points[0]);
+                localPath.AddRange(Points.Select(i => Map.FromLatLngToLocal(i))
+                    .Select(p => new System.Windows.Point(p.X - offset.X, p.Y - offset.Y)));
+                var shape = map.CreatePolygonPath(localPath);
+                var path = Shape as Path;
+                if(path != null)
                 {
-                   Position = Points[0];
-                   
-                   var localPath = new List<System.Windows.Point>(Points.Count);
-                   var offset = Map.FromLatLngToLocal(Points[0]);
-                   foreach(var i in Points)
-                   {
-                      var p = Map.FromLatLngToLocal(i);
-                      localPath.Add(new System.Windows.Point(p.X - offset.X, p.Y - offset.Y));
-                   }
-    
-                   var shape = map.CreatePolygonPath(localPath);
-    
-                   if(this.Shape is Path)
-                   {
-                      (this.Shape as Path).Data = shape.Data;
-                   }
-                   else
-                   {
-                      this.Shape = shape;
-                   }
+                    path.Data = shape.Data;
                 }
                 else
                 {
-                   this.Shape = null;
+                    Shape = shape;
                 }
-             }
+            }
+            else
+            {
+                Shape = null;
+            }
         }
     }
 }

@@ -1,4 +1,4 @@
-
+// ReSharper disable All
 namespace GMap.NET
 {
    using System;
@@ -26,13 +26,13 @@ namespace GMap.NET
 
       public GRect(GPoint location, GSize size)
       {
-         this.x = location.X;
-         this.y = location.Y;
-         this.width = size.Width;
-         this.height = size.Height;
+            x = location.X;
+            y = location.Y;
+            width = size.Width;
+            height = size.Height;
       }
 
-      public static GRect FromLTRB(int left, int top, int right, int bottom)
+      public static GRect FromLtrb(int left, int top, int right, int bottom)
       {
          return new GRect(left,
                               top,
@@ -53,50 +53,21 @@ namespace GMap.NET
          }
       }
 
-      public GPoint RightBottom
-      {
-         get
-         {
-            return new GPoint(Right, Bottom);
-         }
-      }
+      public GPoint RightBottom => new GPoint(Right, Bottom);
 
-      public GPoint RightTop
-      {
-         get
-         {
-            return new GPoint(Right, Top);
-         }
-      }
+       public GPoint RightTop => new GPoint(Right, Top);
 
-      public GPoint LeftBottom
-      {
-         get
-         {
-            return new GPoint(Left, Bottom);
-         }
-      }
+       public GPoint LeftBottom => new GPoint(Left, Bottom);
 
-      public GSize Size
-      {
-         get
-         {
-            return new GSize(Width, Height);
-         }
-         set
-         {
-            this.Width = value.Width;
-            this.Height = value.Height;
-         }
-      }
+       public GSize Size => new GSize(Width, Height);
 
-      public long X
+       public long X
       {
          get
          {
             return x;
          }
-         set
+           private set
          {
             x = value;
          }
@@ -185,10 +156,10 @@ namespace GMap.NET
 
          GRect comp = (GRect) obj;
 
-         return (comp.X == this.X) &&
-            (comp.Y == this.Y) &&
-            (comp.Width == this.Width) &&
-            (comp.Height == this.Height);
+         return (comp.X == X) &&
+            (comp.Y == Y) &&
+            (comp.Width == Width) &&
+            (comp.Height == Height);
       }
 
       public static bool operator==(GRect left, GRect right)
@@ -206,10 +177,10 @@ namespace GMap.NET
 
       public bool Contains(long x, long y)
       {
-         return this.X <= x && 
-            x < this.X + this.Width &&
-            this.Y <= y && 
-            y < this.Y + this.Height;
+         return X <= x && 
+            x < X + Width &&
+            Y <= y && 
+            y < Y + Height;
       }
 
       public bool Contains(GPoint pt)
@@ -219,27 +190,28 @@ namespace GMap.NET
 
       public bool Contains(GRect rect)
       {
-         return (this.X <= rect.X) &&
-            ((rect.X + rect.Width) <= (this.X + this.Width)) && 
-            (this.Y <= rect.Y) &&
-            ((rect.Y + rect.Height) <= (this.Y + this.Height));
+         return (X <= rect.X) &&
+            ((rect.X + rect.Width) <= (X + Width)) && 
+            (Y <= rect.Y) &&
+            ((rect.Y + rect.Height) <= (Y + Height));
       }
 
       public override int GetHashCode()
       {
-         if(this.IsEmpty)
+         if(IsEmpty)
          {
             return 0;
          }
-         return (int)(((this.X ^ ((this.Y << 13) | (this.Y >> 0x13))) ^ ((this.Width << 0x1a) | (this.Width >> 6))) ^ ((this.Height << 7) | (this.Height >> 0x19)));
+         return (int)(((X ^ ((Y << 13) | (Y >> 0x13))) ^ ((Width << 0x1a) | 
+                (Width >> 6))) ^ ((Height << 7) | (Height >> 0x19)));
       }
 
       public void Inflate(long width, long height)
       {
-         this.X -= width;
-         this.Y -= height;
-         this.Width += 2*width;
-         this.Height += 2*height;
+            X -= width;
+            Y -= height;
+            Width += 2*width;
+            Height += 2*height;
       }
 
       public void Inflate(GSize size)
@@ -258,10 +230,10 @@ namespace GMap.NET
       {
          GRect result = GRect.Intersect(rect, this);
 
-         this.X = result.X;
-         this.Y = result.Y;
-         this.Width = result.Width;
-         this.Height = result.Height;
+            X = result.X;
+            Y = result.Y;
+            Width = result.Width;
+            Height = result.Height;
       }
 
       public static GRect Intersect(GRect a, GRect b)
@@ -282,10 +254,10 @@ namespace GMap.NET
 
       public bool IntersectsWith(GRect rect)
       {
-         return (rect.X < this.X + this.Width) &&
-            (this.X < (rect.X + rect.Width)) && 
-            (rect.Y < this.Y + this.Height) &&
-            (this.Y < rect.Y + rect.Height);
+         return (rect.X < X + Width) &&
+            (X < (rect.X + rect.Width)) && 
+            (rect.Y < Y + Height) &&
+            (Y < rect.Y + rect.Height);
       }
 
       public static GRect Union(GRect a, GRect b)
@@ -310,8 +282,8 @@ namespace GMap.NET
 
       public void Offset(long x, long y)
       {
-         this.X += x;
-         this.Y += y;
+            X += x;
+            Y += y;
       }
 
       public override string ToString()

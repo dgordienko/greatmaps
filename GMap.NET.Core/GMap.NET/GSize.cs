@@ -1,4 +1,5 @@
 
+// ReSharper disable All
 namespace GMap.NET
 {
    using System.Globalization;
