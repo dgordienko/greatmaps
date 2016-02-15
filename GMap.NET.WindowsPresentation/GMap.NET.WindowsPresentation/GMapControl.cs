@@ -143,25 +143,19 @@ namespace GMap.NET.WindowsPresentation
 
       private static object OnCoerceZoom(DependencyObject o, object value)
       {
-         GMapControl map = o as GMapControl;
-         if(map != null)
-         {
-            double result = (double)value;
-            if(result > map.MaxZoom)
-            {
-               result = map.MaxZoom;
-            }
-            if(result < map.MinZoom)
-            {
-               result = map.MinZoom;
-            }
+         var map = o as GMapControl;
+          if (map == null) return value;
+          var result = (double)value;
+          if(result > map.MaxZoom)
+          {
+              result = map.MaxZoom;
+          }
+          if(result < map.MinZoom)
+          {
+              result = map.MinZoom;
+          }
 
-            return result;
-         }
-         else
-         {
-            return value;
-         }
+          return result;
       }
 
       private ScaleModes scaleMode = ScaleModes.Integer;
@@ -249,11 +243,9 @@ namespace GMap.NET.WindowsPresentation
               map.core.Zoom = (int)Math.Floor(value);
           }
 
-          if(map.IsLoaded)
-          {
-              map.ForceUpdateOverlays();
-              map.InvalidateVisual(true);
-          }
+          if (!map.IsLoaded) return;
+          map.ForceUpdateOverlays();
+          map.InvalidateVisual(true);
       }
 
         private readonly ScaleTransform lastScaleTransform = new ScaleTransform();
@@ -622,7 +614,7 @@ namespace GMap.NET.WindowsPresentation
       /// </summary>
       public new void InvalidateVisual()
       {
-          this.core.Refresh?.Set();
+            core.Refresh?.Set();
       }
 
         /// <summary>
@@ -1258,15 +1250,9 @@ namespace GMap.NET.WindowsPresentation
       /// <summary>
       /// returs true if map bearing is not zero
       /// </summary>         
-      public bool IsRotated
-      {
-         get
-         {
-            return core.IsRotated;
-         }
-      }
+      public bool IsRotated => core.IsRotated;
 
-      /// <summary>
+        /// <summary>
       /// bearing for rotation of the map
       /// </summary>
       [Category("GMap.NET")]
@@ -1278,39 +1264,37 @@ namespace GMap.NET.WindowsPresentation
          }
          set
          {
-            if(core.bearing != value)
-            {
-               bool resize = core.bearing == 0;
-                    core.bearing = value;
+             if (core.bearing == value) return;
+             var resize = core.bearing == 0;
+                core.bearing = value;
 
-               UpdateRotationMatrix();
+                UpdateRotationMatrix();
 
-               if(value != 0 && value % 360 != 0)
-               {
-                        core.IsRotated = true;
+             if(value != 0 && value % 360 != 0)
+             {
+                    core.IsRotated = true;
 
-                  if(core.tileRectBearing.Size == core.tileRect.Size)
-                  {
-                            core.tileRectBearing = core.tileRect;
-                            core.tileRectBearing.Inflate(1, 1);
-                  }
-               }
-               else
-               {
-                        core.IsRotated = false;
+                 if(core.tileRectBearing.Size == core.tileRect.Size)
+                 {
                         core.tileRectBearing = core.tileRect;
-               }
+                        core.tileRectBearing.Inflate(1, 1);
+                 }
+             }
+             else
+             {
+                    core.IsRotated = false;
+                    core.tileRectBearing = core.tileRect;
+             }
 
-               if(resize)
-               {
-                        core.OnMapSizeChanged((int)ActualWidth, (int)ActualHeight);
-               }
+             if(resize)
+             {
+                    core.OnMapSizeChanged((int)ActualWidth, (int)ActualHeight);
+             }
 
-               if(core.IsStarted)
-               {
-                  ForceUpdateOverlays();
-               }
-            }
+             if(core.IsStarted)
+             {
+                    ForceUpdateOverlays();
+             }
          }
       }
 
@@ -1465,11 +1449,11 @@ namespace GMap.NET.WindowsPresentation
          base.OnRender(drawingContext);
       }
 
-      public Pen CenterCrossPen = new Pen(Brushes.Red, 1);
+      public Pen CenterCrossPen = new Pen(Brushes.Transparent, 0);
       public bool ShowCenter = true;
 
 #if DEBUG
-       private readonly Pen virtualCenterCrossPen = new Pen(Brushes.Blue, 1);
+       private readonly Pen virtualCenterCrossPen = new Pen(Brushes.Transparent, 0);
 #endif
 
        private HelperLineOptions helperLineOption = HelperLineOptions.DontShow;
