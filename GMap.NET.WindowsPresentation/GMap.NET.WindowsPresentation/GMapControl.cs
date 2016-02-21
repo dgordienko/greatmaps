@@ -188,8 +188,8 @@ namespace GMap.NET.WindowsPresentation
 
       private static void ZoomPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
       {
-         var map = (GMapControl)d;
-          if (map?.MapProvider.Projection == null) return;
+         var map = (GMapControl)d;          
+          if (map?.MapProvider?.Projection == null) return;
           var value = (double)e.NewValue;
 
           Debug.WriteLine("Zoom: " + e.OldValue + " -> " + value);
@@ -198,25 +198,20 @@ namespace GMap.NET.WindowsPresentation
           if(map.ScaleMode != ScaleModes.Integer && remainder != 0 && map.ActualWidth > 0)
           {
               bool scaleDown;
-
               switch(map.ScaleMode)
               {
                   case ScaleModes.ScaleDown:
                       scaleDown = true;
                       break;
-
                   case ScaleModes.Dynamic:
                       scaleDown = remainder > 0.25;
                       break;
-
                   default:
                       scaleDown = false;
                       break;
               }
-
               if(scaleDown)
                   remainder--;
-
               var scaleValue = Math.Pow(2d, remainder);
               {
                   if(map.MapScaleTransform == null)
